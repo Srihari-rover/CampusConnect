@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | CampusConnect</title>
+    <link rel="stylesheet" href="Login.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+    <a class="site-brand" href="index.html">✦ CampusConnect</a>
+    <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="Events.html">Events</a>
+    </nav>
+</header>
+
+<main class="page form-box">
+    <div class="panel">
+        <h1>Welcome Back!</h1>
+        <p class="muted">Sign in to explore your campus dashboard.</p>
+
+        <form id="loginForm">
+            <label for="loginEmail">Email</label>
+            <input id="loginEmail" type="email" required placeholder="student@example.com">
+
+            <label for="loginPassword">Password</label>
+            <input id="loginPassword" type="password" required placeholder="Enter any demo password">
+
+            <label for="loginRole">Select role</label>
+            <select id="loginRole">
+                <option value="student">Student</option>
+                <option value="coordinator">Coordinator</option>
+                <option value="faculty">Faculty</option>
+            </select>
+
+            <button class="btn" type="submit">Login</button>
+        </form>
+
+        <p class="muted">New here? <a href="Register.html">Create an account</a></p>
+        <p id="loginMessage" class="notice" hidden></p>
+    </div>
+</main>
+</body>
+</html>

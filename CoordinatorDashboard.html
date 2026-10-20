@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coordinator Dashboard | CampusConnect</title>
+    <link rel="stylesheet" href="CoordinatorDashboard.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <a class="site-brand" href="index.html">✦ CampusConnect</a>
+        <nav class="site-nav">
+            <a href="Events.html">Events</a>
+            <a href="#" data-logout>Logout</a>
+        </nav>
+    </header>
+
+    <main class="page">
+        <h1 class="page-title">Coordinator Dashboard</h1>
+        <p class="muted">Create events, review participants and track event expenses.</p>
+
+        <div class="stats">
+            <div class="stat">Total events<strong id="coordEventCount">0</strong></div>
+            <div class="stat">Registrations<strong id="coordRegCount">0</strong></div>
+            <div class="stat">Remaining funds<strong id="coordBalance">₹0</strong></div>
+        </div>
+
+        <div class="panel">
+            <h2>Create an Event</h2>
+            <form id="createEventForm">
+                <label for="newEventTitle">Event name</label>
+                <input id="newEventTitle" required placeholder="e.g. Coding Workshop">
+
+                <label for="newEventDate">Event date</label>
+                <input id="newEventDate" type="date" required>
+
+                <label for="newEventCategory">Category</label>
+                <select id="newEventCategory">
+                    <option>Workshop</option>
+                    <option>Technical</option>
+                    <option>Cultural</option>
+                    <option>Sports</option>
+                </select>
+                <label for="newEventDescription">Event Description</label>
+                <textarea id="newEventDescription" rows="3" required
+                    placeholder="Describe the event, its activities and who can participate...">
+</textarea>
+
+                <label for="newEventBudget">Allocated budget (₹)</label>
+                <input id="newEventBudget" type="number" min="0" value="0" required>
+
+                <button class="btn" type="submit">Add Event</button>
+            </form>
+            <p id="createEventMessage" class="notice" hidden></p>
+        </div>
+
+
+        <div class="panel">
+            <h2>Record an Expense</h2>
+            <form id="expenseForm">
+                <label for="expenseEvent">Event</label>
+                <select id="expenseEvent" required></select>
+
+                <label for="expenseDescription">Description</label>
+                <input id="expenseDescription" required placeholder="e.g. Decorations">
+
+                <label for="expenseAmount">Amount (₹)</label>
+                <input id="expenseAmount" type="number" min="0.01" step="0.01" required>
+
+                <button class="btn" type="submit">Record Expense</button>
+            </form>
+            <p id="expenseMessage" class="notice" hidden></p>
+        </div>
+
+        <div class="panel">
+            <h2>Manage Events</h2>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Event</th>
+                            <th>Date</th>
+                            <th>Registrations</th>
+                            <th>Budget</th>
+                            <th>Expenses</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="coordinatorEventTable"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="panel">
+            <h2>Participant List</h2>
+            <label for="participantEvent">Choose an event</label>
+            <select id="participantEvent"></select>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Event</th>
+                            <th>Student</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody id="participantTable"></tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

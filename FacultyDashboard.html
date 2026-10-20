@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Dashboard | CampusConnect</title>
+    <link rel="stylesheet" href="FacultyDashboard.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+    <a class="site-brand" href="index.html">✦ CampusConnect</a>
+    <nav class="site-nav">
+        <a href="Events.html">Events</a>
+        <a href="#" data-logout>Logout</a>
+    </nav>
+</header>
+
+<main class="page">
+    <h1 class="page-title">Faculty Overview</h1>
+    <p class="muted">Review campus activities and their financial summaries.</p>
+
+    <div class="stats">
+        <div class="stat">Total events<strong id="facultyEventCount">0</strong></div>
+        <div class="stat">Total registrations<strong id="facultyRegCount">0</strong></div>
+        <div class="stat">Total expenses<strong id="facultyExpenses">₹0</strong></div>
+    </div>
+
+    <div class="panel">
+        <h2>Event Report</h2>
+        <div class="table-wrap">
+            <table>
+                <thead><tr><th>Event</th><th>Date</th><th>Participants</th><th>Budget</th><th>Expenses</th><th>Balance</th></tr></thead>
+                <tbody id="facultyEventTable"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="panel">
+        <h2>Expense Records</h2>
+        <div class="table-wrap">
+            <table>
+                <thead><tr><th>Event</th><th>Description</th><th>Amount</th></tr></thead>
+                <tbody id="facultyExpenseTable"></tbody>
+            </table>
+        </div>
+    </div>
+</main>
+</body>
+</html>

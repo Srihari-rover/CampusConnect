@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard | CampusConnect</title>
+    <link rel="stylesheet" href="StudentDashboard.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+    <a class="site-brand" href="index.html">✦ CampusConnect</a>
+    <nav class="site-nav">
+        <a href="Events.html">Events</a>
+        <a href="#" data-logout>Logout</a>
+    </nav>
+</header>
+
+<main class="page">
+    <h1 class="page-title">Student Dashboard</h1>
+    <p id="welcomeText" class="muted">Welcome! Explore and join campus activities.</p>
+
+    <div class="stats">
+        <div class="stat">Available events<strong id="studentEventCount">0</strong></div>
+        <div class="stat">My registrations<strong id="studentRegCount">0</strong></div>
+        <div class="stat">My role<strong>Student</strong></div>
+    </div>
+
+    <div class="panel">
+        <h2>My Registered Events</h2>
+        <div class="table-wrap">
+            <table>
+                <thead><tr><th>Event</th><th>Date</th><th>Status</th></tr></thead>
+                <tbody id="studentRegistrations"></tbody>
+            </table>
+        </div>
+        <p id="studentEmpty" class="muted">You haven't registered for an event yet.</p>
+        <a class="btn" href="Events.html">Explore Events</a>
+    </div>
+</main>
+</body>
+</html>
