@@ -47,10 +47,7 @@ html {
     text-shadow:5px 5px 7px rgb(172, 172, 172);
 }
 
-h3 {
-    text-shadow: 5px 4px 8px grey;
-    font-size: 48px;
-}
+
 .brand-mark{
     background: linear-gradient(135deg, var(--blue), var(--green));
     color: rgb(190, 197, 183);
